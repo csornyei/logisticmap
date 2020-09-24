@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #eee;
+    background-color: #242582;
+    font-family: 'Oswald',
+        sans-serif;
+}
+
+header {
+    padding: 8px;
+    text-align: center;
+    background-color: #F64C72;
+    box-shadow: 0px 10px 30px 5px rgba(246, 76, 113, 0.5);
+}
+
+h1 {
+    margin-bottom: 6px;
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+canvas {
+    background-color: #553D67;
+    box-shadow: 10px 15px 30px 5px rgba(85, 61, 103, .5);
+    border-radius: 8px;
+}
+
+.formula {
+    margin-top: 8px;
+    font-style: italic;
+    font-size: 24px;
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+.small {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.canvases {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.controllers {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.input-group input {
+    margin-top: 14px;
+}
+
+.number-input {
+    border: none;
+    outline: none;
+    background: #F64C72;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+    background: #F64C72;
+    cursor: pointer;
+    margin-top: -4px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 3px 3px 5px 3px rgba(246, 76, 114, .2);
+    /* Add cool effects to your sliders! */
+}
+
+.slider-input {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+}
+
+.slider-input:focus {
+    outline: none;
+}
+
+.slider-input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #99738e;
+}
+
+.slider-input::-webkit-slider-thumb {
+    box-shadow: 3px 3px 5px 3px rgba(246, 76, 114, .2);
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+    background: #F64C72;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+}
+
+.slider-input:focus::-webkit-slider-runnable-track {
+    background: #8a6880;
+}
+
+.slider-input::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #F64C72;
+}
+
+.slider-input::-moz-range-thumb {
+    box-shadow: 3px 3px 5px 3px rgba(246, 76, 114, .2);
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+    background: #F64C72;
+    cursor: pointer;
+}
+
+.slider-input::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+
+.slider-input::-ms-fill-lower {
+    background: #a38199;
+}
+
+.slider-input::-ms-fill-upper {
+    background: #99738e;
+}
+
+.slider-input::-ms-thumb {
+    box-shadow: 3px 3px 5px 3px rgba(246, 76, 114, .2);
+    height: 16px;
+    width: 16px;
+    border-radius: 3px;
+    background: #F64C72;
+    cursor: pointer;
+}
+
+.slider-input:focus::-ms-fill-lower {
+    background: #99738e;
+}
+
+.slider-input:focus::-ms-fill-upper {
+    background: #8a6880;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.button {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #F64C72;
+    padding: 12px 18px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px 5px rgba(246, 76, 114, .5);
+    cursor: pointer;
+    position: relative;
+}
+
+.button::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #F64C72;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 1;
+    transition: all .4s;
+}
+
+.button:hover {
+    background-color: #f8708e;
+}
+
+.button:active {
+    transform: translateY(4px);
+}
+
+.button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
